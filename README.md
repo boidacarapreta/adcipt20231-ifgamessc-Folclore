@@ -10,9 +10,10 @@
 
 
 ## Regras
-
+ Os jogadores devem se ajudar no estilo clássico de cooperativo, sempre se comunicando para chegar no final da fase. Nenhum puzzle pode ser completado sozinho e para completar a fase ambos devem estar na área denominada "fim".
 
 ## Objetivos
 
 
 ## Receita
+ O jogo será pago, com um valor acessível e de pagamento único, por volta de 1 USD.
