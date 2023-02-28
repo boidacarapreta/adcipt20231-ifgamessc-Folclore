@@ -1,10 +1,10 @@
 # Folclore
 
 ## Premissa do Jogo
- O jogo é no estilo de plataforma, sob o gênero de quebra-cabeça cooperativo, com uma mudança de gênero na última fase para ação cooperativo. Ambos os jogadores devem se comunicar em VoIP para solucionarem os enigmas que são apresentados e que bloqueiam seus caminhos para objetos necessários para a transição de níveis e que serão úteis para o combate na última fase contra um chefe.
+ Um caçador descobre uma entidade antiga chamada Corpo-seco, que então o possui e procede a libertar outras antigas entidades para poder tomar controle das entidades do folclore brasileiro. Com esta ameaça, dois heróis do folclore se juntam para poder liberar seus amigos e derrotar o Corpo-Seco antes que ele domine toda a magia dos personagens populares.
 
 ## Referências 
- Um jogo inspirado no jogo Fireboy & Watergirl, com um tema do folclore brasileiro.
+ Inspirado em jogos de plataforma clássicos com um extra de quebra-cabeça, como Fireboy & Watergirl, e com ação, como os jogos da série Metal Slug e Commando.
 
 ## O Jogo Ideal
 
