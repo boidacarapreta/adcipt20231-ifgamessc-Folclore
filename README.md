@@ -16,4 +16,4 @@
 
 
 ## Receita
- O jogo será pago, com um valor acessível e de pagamento único, por volta de 1 USD.
+ O jogo ganhará por meio de anúncios, com uma meta mensal de 500 Dólares. Com um gasto de 30 Dólares por mês para manter o jogo atualizado e continuar expandindo.
