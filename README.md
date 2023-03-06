@@ -5,7 +5,7 @@
   outras entidades do folclore brasileiro, os enfraquecendo e obtendo controle sobre seus corpos. Com esta ameaça, dois heróis das lendas brasileiras se juntam para enfrentar o Corpo-Seco antes que ele domine toda a magia dos personagens populares e chegue na Samaúma, a árvore mãe da natureza e centro do poder de todas criaturas mágicas
 
 ## Referências 
- Inspirado em jogos de plataforma clássicos com um extra de quebra-cabeça, como Fireboy & Watergirl.
+ Inspirado em jogos de plataforma clássicos com um extra de quebra-cabeça, como Fireboy & Watergirl. Formato do jogo inspirado pelo jogo Ying Yang, com alguns aspectos baseados em undertale e design dos personagens baseados na vesão apesentada pela página Folclore Br  
 
 ## O Jogo Ideal
 Saci e Anhangá acordam no meio da mata toda destruída, como se tivesse tido uma luta ali.
