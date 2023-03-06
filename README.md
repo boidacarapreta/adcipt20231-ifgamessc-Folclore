@@ -35,6 +35,7 @@ Sons: Ambientado na mata, sons de animais e uma trilha de terror ao fundo. Quand
 Há alguns portais espalhados pela mata, alguns feitos para dar um atalho aos heróis e outros feitos pelo corpo seco para que os heróis sejam transportados para algum lugar aleatório do mapa.
 
 
+
 ## Regras
  Os jogadores precisam se ajudar para avançar no jogo, sempre se comunicando para chegar no final da fase. Nenhum puzzle pode ser completado sozinho e para completar a fase ambos devem estar na área denominada "fim". Eles irão lutar contra personagens e não se deixar ser mortos enquanto tentam vencẽ-los.
 Heróis tem que respeitar a limitação as barreiras, paredes, podendo atravessar apens qunado caminho está liberado e quando os obstáculos em questão são apenas no cenário. 
