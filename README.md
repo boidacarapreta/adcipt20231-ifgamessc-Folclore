@@ -31,7 +31,8 @@ Ideia: Neste momento, após ver as duas narrativas, os personagens têm que entr
 
 Caso acreditem na Cuca, eles lutam com a vitória régia e a vencem, depois a cuca se mostra ser o Corpo Seco e agradecem a eles a ajuda. Finalizando o jogo com uma tela escura.
 
-Sons: Ambientado na mata, sons de animais e uma trilha de terror ao fundo. Quando aparecem personagem que irão ter uma fala, a musica parae ouve-se um som do personagem (no caso da mula sem cabeça , escuta um relinchar, a Iara escuta-se um canto, )
+Sons: Ambientado na mata, sons de animais e uma trilha de terror ao fundo. Quando aparecem personagem que irão ter uma fala, a musica parae ouve-se um som do personagem (no caso da mula sem cabeça , escuta um relinchar, a Iara escuta-se um canto)
+
 Há alguns portais espalhados pela mata, alguns feitos para dar um atalho aos heróis e outros feitos pelo corpo seco para que os heróis sejam transportados para algum lugar aleatório do mapa.
 
 
