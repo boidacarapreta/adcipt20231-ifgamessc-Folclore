@@ -31,9 +31,13 @@ Ideia: Neste momento, após ver as duas narrativas, os personagens têm que entr
 
 Caso acreditem na Cuca, eles lutam com a vitória régia e a vencem, depois a cuca se mostra ser o Corpo Seco e agradecem a eles a ajuda. Finalizando o jogo com uma tela escura.
 
+Sons: Ambientado na mata, sons de animais e uma trilha de terror ao fundo. Quando aparecem personagem que irão ter uma fala, a musica parae ouve-se um som do personagem (no caso da mula sem cabeça , escuta um relinchar, a Iara escuta-se um canto, )
+Há alguns portais espalhados pela mata, alguns feitos para dar um atalho aos heróis e outros feitos pelo corpo seco para que os heróis sejam transportados para algum lugar aleatório do mapa.
+
 
 ## Regras
  Os jogadores precisam se ajudar para avançar no jogo, sempre se comunicando para chegar no final da fase. Nenhum puzzle pode ser completado sozinho e para completar a fase ambos devem estar na área denominada "fim". Eles irão lutar contra personagens e não se deixar ser mortos enquanto tentam vencẽ-los.
+Heróis tem que respeitar a limitação as barreiras, paredes, podendo atravessar apens qunado caminho está liberado e quando os obstáculos em questão são apenas no cenário. 
 
 ## Objetivos
 Recuperar seus ítens, vencer os personagens possuídos, chegar a árvore Samaúma antes do Corpo Seco e vence-lo.
