@@ -1,31 +1,28 @@
 # Folclore
 
 ## Premissa do Jogo
- Uma antiga entidade ressurge, o chamado Corpo Seco é o terror da mata, uma alma tão ruim que foi rejeitada pelo próprio inferno. Ele então parte tomando o poder das 
-  outras entidades do folclore brasileiro, os enfraquecendo e obtendo controle sobre seus corpos. Com esta ameaça, dois heróis das lendas brasileiras se juntam para enfrentar o Corpo-Seco antes que ele domine toda a magia dos personagens populares e chegue na Samaúma, a árvore mãe da natureza e centro do poder de todas criaturas mágicas.
-
+Uma antiga entidade ressurge, o chamado Corpo Seco é o terror da mata. Uma alma tão ruim que foi rejeitada pelo próprio inferno.
+Ele está em busca da árvore Samaúma, a origem de toda vida natural e centro do poder de todas criaturas mágicas, para que tomando seu poder, possa se vingar da natureza que o amaldiçoou.
+Para conseguir o que quer, ele captura as entidades da mata, as enfraquecendo e controlando suas mentes, forçando-os a serem seus guerreiros.
+Com esta ameaça, dois heróis das lendas brasileiras se juntam para enfrentar o espírito malígno antes que ele domine toda a magia e cumpra sua missão de destruir de uma vez a natureza, trazendo caos e morte a todos seres que nela vivem.
 ## Referências 
- Inspirado em jogos de plataforma clássicos com um extra de quebra-cabeça, como Fireboy & Watergirl. Formato do jogo inspirado pelo jogo Ying Yang, com alguns aspectos baseados em undertale e design dos personagens baseados na vesão apesentada pela página Folclore Br.
+Formato de labirinto vertical inspirado no jogo ying e yang e vento dos semestres passados, com quebra cabeçaas inspirados no jogo Fireboy e Watergirl com história e design inspirados na série Cidade invisível da Netflix e na versão de folclore apresentada pela organização Folclore BR
 
 ## O Jogo Ideal
-Saci e Anhangá acordam no meio da mata toda destruída, como se tivesse tido uma luta ali.
-Sem memória do que aconteceu, percebem que estão sem seus ítens de magia (saci sem seu gorro, anhangu sem seu cajado), e então escutam um chamado de socorro em meio ao caos do lugar.
-Percebem que era a cuca, e ao encontrar a mesma, ela está fraca e tentando alertá-los
-Ela diz que um caçador explorando as lendas locais na amazônia, descobriu como conjurar o Corpo Seco e foi possuído pelo espírito, que está usando o corpo dele para tomar o poder das outras lendas do folclore, atrás da localização da árvore samaúma, a mãe das árvores, conta também que ela e os outros estavam em uma batalha contra o Corpo Seco e quem sobreviveu ficou sob controle dele (como iara, curupira, caipora, boitatá, mapinguari,).
-Cuca então fala que o corpo seco achou que ela estava morta, por isso a deixou para trás e explica aos meninos o que terão que fazer e como lutar contra o corpo seco, porém como está fraca, diz que não vai conseguir ajudar ativamente, fala pra eles que como os outros mitos estão sendo controlados, eles tem que tomar cuidado pois o corpo seco é maligno e manipulador.
+Saci e Anhangá acordam no meio da mata, árvores caídas e corpos de animais espalhados pelo chão são as únicas coisas que seus olhos veem. Algo muito destrutivo passou por ali e eles não conseguem lembrar de nada. Escutam um grito estridente ao redor, e de forma instintiva buscam pelos seus ítens mágicos, Saci busca pelo seu gorro para conjurar um redemoinho e Anhangá busca por seu cajado que direciona sua magia, porém nenhum dos dois encontram o que procuram. Se sentindo inseguros escutam novamente o grito estridente, e dessa vez o instinto é de ir ao encontro da origem do desespero sonoro. Eles encontram a cuca, ensaguentada e com roupas rasgadas, atirada ao chão com uma lança atravessada em sua barriga. Ao perceberem que era sua amiga, eles a socorrem e questionam o que aconteceu. A cuca ao entender que ambos estão sem memória, os informa que estava vigiando um caçador que estava explorando as antigas lendas locais e que ele parecia inofensivo, porém quando percebeu o caçador tinha conjurado o Corpo Seco e ela não foi capaz de impedir. Ela disse que emitiu um chamado para Iara, Boitatá, Caipora e outras entidades, porém os que chegaram a tempo não foram capazes de controlar o Corpo Seco, e os que não foram mortos agora estavam sob controle do Demonio. Ela os orienta a recuperar seus ítens mágicos e a combater o Corpo Seco, pedindo cuidado com as outras entidades, pois estavam sendo manipuladas e não sabe se sobreviveriam.
 
-Os dois então buscam pelos seus itens mágicos jogo de labirinto vertical.
+Os dois então buscam pelos seus itens mágicos, passando pelos quebra cabeças de forma conjunta e explorando o mapa para alcançar o objetivo.
+Após conseguirem seus ítens eles encontram a primeira entidade controla pelo Corpo Seco, Iara os recebe com sua voz encantada os tentando a se juntar a ela. Os heróis temendo serem vítimas das manipulações, lutam com Iara. Após vencerem Iara, recebem um recado por uma RAsga MOrtalha. Era uma mensagem da cuca, falando que está de olho e tentando descobrir um jeito de acabar de uma vez por todas com o Corpo Seco, e que agora que derrotaram Iara, outras entidades controladas pelo vilão iriam atras deles para os impedir.
+Ação da Iara: se ela te atingir com o canto/magia dela, o personagem automaticamente segue até ela hipnotizado sem poder lutar para que ela consiga atingi-lo...
 
-Após conseguirem seus ítens eles encontram a Iara que pede para que eles se juntem a ela e os demais na luta deles, que só querem o melhor para a natureza, que ela não quer lutar contra eles. Os meninos já avisados pela cuca de que os demais estavam enfeitiçados, lembram do que a cuca falou sobre manipulação e dizem que só querem o bem dela e lutam com ela.
+Os personagens encontram mais "inimigos" e tem que lutar com eles.
+Eles vão lutando com cada personagem que encontram, e todos tentam os convencer a mudar de lado, porém eles permanecem firmes e lidando com as perdas.
 
-Ação da Iara: se ela te atingir com o canto/magia dela, o personagem automaticamente segue até ela hipnotizado sem poder lutar para que ela consiga atingi-lo.
-Após derrotarem Iara, a cuca aparece novamente os alertando, que agora que derrotaram um dos fantoches do corpo seco, ele estará alerta e irá mandar mais dos fantoches para tentar impedi-los.
-
-Os personagens encontram mais folclores e tem que lutar com eles.
-Eles vão lutando com cada personagem que encontram, os personagens falam coisas tentando fazer com que eles “mudem de lado”, mas eles persistem mesmo sofrendo ao atacar os amigos.
-
-Fim: após lutar com todas lendas e irem vencendo sempre recebendo instruções da cuca, eles chegam em um lago onde está Vitória-Régia que fala pra eles que quem está possuído pelo espírito do corpo seco não é nenhum caçador, e que todos os outros estavam tentando alertá-los de que a cuca estava possuída e estava os manipulando e iludindo com sua magia para que achassem o contrário, que ela queria acesso a samaúma, pois possui poder absoluto de proteção e magia da natureza.
-Nesta situação a Cuca aparece para se defender, diz que falta pouco para conseguirem salvar a floresta, e que ela pode reviver a todos os amigos com a magia da samaúma, que eles tem que matar a vitória régia pois ela estava possuída pelo corpo seco e que ela é que queria pegar o poder para destruição.
+Após chegarem a entrada da caverna onde fica escondida a Samaúma, encontram Vitória Régia, uma antiga lenda que a muito não havia sido vista.
+Ela pede que a ouçam, pede para que ajudem a salvar a Samaúma, pois o Corpo Seco estava atrás dela. 
+Os heróis não entendem o pedido e questionam se ela esta sendo manipulada ou não.
+Neste momento a Cuca aparece com a rasga mortalha e os incentiva a destruir a Vitória Régia, dizendo que ela está possuída pelo próprio mal do Corpo Seco. 
+Quando os garotos vão atacar Vitória Régia ela implora pois quem está realmente sendo controlada é a Cuca, e que ela os manipulou para que fizesse todo o trabalho sujo para ela, já que não teria forças o suficiente após a batalha para seguir com sua vingança.
 
 Ideia: Neste momento, após ver as duas narrativas, os personagens têm que entrar em um consenso se acreditam na cuca  ou na vitória régia. Irão aparecer as duas opções para eles acreditarem em uma ou outra. Caso acreditem na vitória régia eles se juntam a ela e vencem a cuca, que se revela estar realmente possuída pelo corpo seco, que sai do corpo dela e mostra sua figura horrível e luta contra eles
 
