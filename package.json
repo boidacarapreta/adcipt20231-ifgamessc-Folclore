@@ -1,6 +1,26 @@
 {
+  "name": "folclore",
+  "version": "0.1.0",
+  "description": "Jogo Web com suporte WebRTC",
+  "main": "servidor.js",
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "scripts": {
+    "start": "node servidor.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifgamessc/Folclore.git"
+  },
+  "keywords": [
+    "web",
+    "webrtc"
+  ],
+  "author": "Matheus Marques Garcia <matheus.mg2002@aluno.ifsc.edu.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ifgamessc/Folclore/issues"
+  },
+  "homepage": "https://github.com/ifgamessc/Folclore#readme"
 }
-
