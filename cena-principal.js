@@ -1,0 +1,49 @@
+export default class principal extends Phaser.Scene {
+    constructor() {
+      super("principal");
+    }
+  
+    preload() {
+      this.load.spritesheet("robo-1", "./robo-1.png", {
+        frameWidth: 64,
+        frameHeight: 64,
+      });
+      //
+      this.load.spritesheet("robo-2", "./robo-2.png", {
+        frameWidth: 64,
+        frameHeight: 64,
+      });
+    }
+  
+    create() {
+      this.jogador_1 = this.physics.add.sprite(200, 225, "robo-1");
+      //
+      this.anims.create({
+        key: "jogador-1-baixo",
+        frames: this.anims.generateFrameNumbers("robo-1", {
+          start: 0,
+          end: 15,
+        }),
+        frameRate: 30,
+        repeat: -1,
+      });
+      //
+      this.jogador_1.anims.play("jogador-1-baixo", true);
+      //
+      this.jogador_2 = this.physics.add.sprite(600, 225, "robo-2");
+      //
+      this.anims.create({
+        key: "jogador-2-direita",
+        frames: this.anims.generateFrameNumbers("robo-2", {
+          start: 32,
+          end: 47,
+        }),
+        frameRate: 30,
+        repeat: -1,
+      });
+      //
+      this.jogador_2.anims.play("jogador-2-direita", true);
+    }
+  
+    update() {}
+  }
