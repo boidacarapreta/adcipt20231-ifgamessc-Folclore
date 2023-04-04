@@ -4,11 +4,24 @@ export default class principal extends Phaser.Scene {
     }
   
     preload() {
+      //
+      // Mapa
+      // Tilemap
+      this.load.tilemapTiledJSON(
+        "mapa-teste",
+        "./assets/mapa-teste.json"
+      );
+      // Tilesets
+      this.load.image("chao", "./assets/chao.png")
+      this.load.image("tijolos", "./assets/tijolos.png")
+      //
+      // Personagem 1
       this.load.spritesheet("robo-1", "./robo-1.png", {
         frameWidth: 64,
         frameHeight: 64,
       });
       //
+      // Personagem 2
       this.load.spritesheet("robo-2", "./robo-2.png", {
         frameWidth: 64,
         frameHeight: 64,
@@ -16,6 +29,30 @@ export default class principal extends Phaser.Scene {
     }
   
     create() {
+      // Mapa
+      // Tilemap
+      this.mapa_teste = this.make.tilemap({
+        key: "mapa-teste",
+      });
+      // Tilesets
+      this.tileset_mapa_teste_chao = 
+        this.mapa_teste.addTilesetImage("chao", "chao");
+      this.tileset_mapa_teste_tijolo =
+        this.mapa_teste.addTilesetImage("tijolos", "tijolos");
+      // Layer 0: chão
+      this.chao = this.mapa_teste.createLayer(
+        "chao",
+        this.tileset_mapa_teste_chao,
+        0,
+        0
+      );
+      // Layer 1: Parede (Tijolos)
+      this.tijolo = this.mapa_teste.createLayer(
+        "tijolo",
+        this.tileset_mapa_teste_tijolo,
+        0,
+        0
+      );  
       this.jogador_1 = this.physics.add.sprite(200, 225, "robo-1");
       //
       this.anims.create({
