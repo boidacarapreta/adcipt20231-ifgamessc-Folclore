@@ -4,7 +4,7 @@ export default class fim_do_jogo extends Phaser.Scene {
     }
   
     preload() {
-      this.load.image("ifsc-sj-2014", "./ifsc-sj-2014.png");
+      this.load.image("ifsc-sj-2014", "./assets/ifsc-sj-2014.png");
     }
   
     create() {

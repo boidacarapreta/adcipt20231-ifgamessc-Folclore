@@ -1,5 +1,5 @@
 tasks:
-  - init: npm install -- prefix servidor
+  - init: npm install --prefix servidor
     command: npm start --prefix servidor
 
 ports:
