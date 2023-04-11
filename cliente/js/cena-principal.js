@@ -120,19 +120,92 @@ export default class principal extends Phaser.Scene {
       this.jogador_2 = this.add.sprite(600, 225, "robo-2");
       
       // Botões
-      this.cima = this.add.sprite(100, 350, "cima", 0)
+      this.cima = this.add
+      .sprite(120, 330, "cima", 0)
       .setInteractive()
       .on("pointerdown", () => {
         this.cima.setFrame(1);
-        this.jogador_1.setVelocityY(-70)
+        this.jogador_1.setVelocityY(-200)
         this.jogador_1.anims.play("jogador-1-cima")
       })
       .on("pointerup", () =>{
         this.cima.setFrame(0);
         this.jogador_1.setVelocityY(0);
-      });
+    
+      })
+      .setScrollFactor(0);
+      
+      this.baixo = this.add
+      .sprite(120, 400, "baixo", 0)
+      .setInteractive()
+      .on("pointerdown", () => {
+        this.baixo.setFrame(1);
+        this.jogador_1.setVelocityY(200)
+        this.jogador_1.anims.play("jogador-1-baixo")
+      })
+      .on("pointerup", () =>{
+        this.baixo.setFrame(0);
+        this.jogador_1.setVelocityY(0);
+      })
+      .setScrollFactor(0);
 
-    }
+      this.esquerda = this.add
+      .sprite(50, 400, "esquerda", 0)
+      .setInteractive()
+      .on("pointerdown", () => {
+        this.esquerda.setFrame(1);
+        this.jogador_1.setVelocityX(-200)
+        this.jogador_1.anims.play("jogador-1-esquerda")
+      })
+      .on("pointerup", () =>{
+        this.esquerda.setFrame(0);
+        this.jogador_1.setVelocityX(0);
+      })
+      .setScrollFactor(0);
+
+      this.direita = this.add
+      .sprite(190, 400, "direita", 0)
+      .setInteractive()
+      .on("pointerdown", () => {
+        this.direita.setFrame(1);
+        this.jogador_1.setVelocityX(200)
+        this.jogador_1.anims.play("jogador-1-direita")
+      })
+      .on("pointerup", () =>{
+        this.direita.setFrame(0);
+        this.jogador_1.setVelocityX(0);
+      })
+      .setScrollFactor(0);    
+    
+    // Colisões por tile
+    this.chao.setCollisionByProperty({ collides: true});
+    this.tijolos.setCollisionByProperty({ collides: true});
+    
+    // Colisão entre P1 e mapa (por layer)
+    this.physics.add.collider(
+      this.jogador_1,
+      this.chao,
+      this.collision,
+      null,
+      this
+    );
+    this.physics.add.collider(
+      this.jogador_1,
+      this.tijolos,
+      this.collision,
+      null,
+      this
+    );
+    // Cena (1920x1920) maior que a tela (800x450)
+    this.cameras.main.setBounds(0, 0, 1920, 1920);
+    this.physics.world.setBounds(0, 0, 1920, 1920);
+    this.cameras.main.startFollow(this.jogador_1); 
+
+    
+  
+  
+  }
+
   
     update() {}
   }
