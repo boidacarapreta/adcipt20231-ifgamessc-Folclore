@@ -43,3 +43,6 @@ Recuperar seus ítens, vencer os personagens possuídos, chegar a árvore Samaú
 
 ## Receita
  O jogo ganhará por meio de anúncios, com uma meta mensal de 500 Dólares. Com um gasto de 30 Dólares por mês para manter o jogo atualizado e continuar expandindo.
+ 
+## Canvas Público
+ Link Arquivo --> https://github.com/ifgamessc/Folclore/blob/8d221f205e4b56ca28e6e2a4b08e2d19b3d74a8f/canvas-1117111-20230326202026.pdf
