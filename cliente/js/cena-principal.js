@@ -52,11 +52,24 @@ export default class principal extends Phaser.Scene {
       this.load.spritesheet("direita","./assets/direita.png",{
         frameWidth: 64,
         frameHeight: 64
-      });   
+      });
+      
+      this.load.spritesheet("tela-cheia", "./assets/tela-cheia.png",{
+        frameWidth: 64,
+        frameHeight: 64,
+      });
+
+      /* Sons*/
+      this.load.audio("tecno-trilha", "./assets/techno.mp3")
+      this.load.audio("metal-som", "./assets/metal.mp3")
+      this.load.audio("cristal-som", "./assets/cristal.mp3")
     }
-  
+ 
     create() {
-      /* Mapa */ 
+      /* Trilha Sonora */
+      this.trilha = this.sound.add("tecno-trilha");
+      this.trilha.play();
+      
       /* Tilemap */ 
       this.mapa_teste = this.make.tilemap({
         key: "mapa-teste",
@@ -86,7 +99,7 @@ export default class principal extends Phaser.Scene {
       /* Personagem 1 */ 
       this.jogador_1 = this.physics.add.sprite(200, 225, "robo-1");
       
-      this.anims.create({
+      this.anims.create ({
         key: "jogador-1-cima",
         frames: this.anims.generateFrameNumbers("robo-1", {
           start: 64,
@@ -96,7 +109,7 @@ export default class principal extends Phaser.Scene {
         repeat: -1,
       });
       
-      this.anims.create({
+      this.anims.create ({
         key: "jogador-1-baixo",
         frames: this.anims.generateFrameNumbers("robo-1", {
           start: 0,
@@ -105,7 +118,7 @@ export default class principal extends Phaser.Scene {
         frameRate: 30,
         repeat: -1,
       });
-      this.anims.create({
+      this.anims.create ({
         key: "jogador-1-esquerda",
         frames: this.anims.generateFrameNumbers("robo-1", {
           start: 96,
@@ -115,7 +128,7 @@ export default class principal extends Phaser.Scene {
         repeat: -1,
       });
       
-      this.anims.create({
+      this.anims.create ({
         key: "jogador-1-direita",
         frames: this.anims.generateFrameNumbers("robo-1", {
           start: 32,
@@ -130,7 +143,7 @@ export default class principal extends Phaser.Scene {
       
       this.cristal = this.physics.add.sprite(700, 300, "cristal");
 
-      this.anims.create({
+      this.anims.create ({
         key: "cristal-brilhando",
         frames: this.anims.generateFrameNumbers("cristal", {
           start: 0,
@@ -149,10 +162,10 @@ export default class principal extends Phaser.Scene {
       .setInteractive()
       .on("pointerdown", () => {
         this.cima.setFrame(1);
-        this.jogador_1.setVelocityY(-200)
+        this.jogador_1.setVelocityY(-400)
         this.jogador_1.anims.play("jogador-1-cima")
       })
-      .on("pointerup", () =>{
+      .on("pointerup", () => {
         this.cima.setFrame(0);
         this.jogador_1.setVelocityY(0);
     
@@ -164,10 +177,10 @@ export default class principal extends Phaser.Scene {
       .setInteractive()
       .on("pointerdown", () => {
         this.baixo.setFrame(1);
-        this.jogador_1.setVelocityY(200)
+        this.jogador_1.setVelocityY(400)
         this.jogador_1.anims.play("jogador-1-baixo")
       })
-      .on("pointerup", () =>{
+      .on("pointerup", () => {
         this.baixo.setFrame(0);
         this.jogador_1.setVelocityY(0);
       })
@@ -178,10 +191,10 @@ export default class principal extends Phaser.Scene {
       .setInteractive()
       .on("pointerdown", () => {
         this.esquerda.setFrame(1);
-        this.jogador_1.setVelocityX(-200)
+        this.jogador_1.setVelocityX(-400)
         this.jogador_1.anims.play("jogador-1-esquerda")
       })
-      .on("pointerup", () =>{
+      .on("pointerup", () => {
         this.esquerda.setFrame(0);
         this.jogador_1.setVelocityX(0);
       })
@@ -192,15 +205,29 @@ export default class principal extends Phaser.Scene {
       .setInteractive()
       .on("pointerdown", () => {
         this.direita.setFrame(1);
-        this.jogador_1.setVelocityX(200)
+        this.jogador_1.setVelocityX(400)
         this.jogador_1.anims.play("jogador-1-direita")
       })
-      .on("pointerup", () =>{
+      .on("pointerup", () => {
         this.direita.setFrame(0);
         this.jogador_1.setVelocityX(0);
       })
-      .setScrollFactor(0);    
-    
+      .setScrollFactor(0);
+      
+      this.tela_cheia = this.add
+        .sprite(750, 50, "tela-cheia", 0 )
+        .setInteractive()
+        .on("pointerdown", () => {
+          if (this.scale.isFullscreen) {
+            this.tela_cheia.setFrame(0);
+            this.scale.stopFullscreen();
+          } else {
+            this.tela_cheia.setFrame(1);
+            this.scale.startFullscreen();
+          }
+        })
+        .setScrollFactor(0);
+
     /* Colisões por tile */ 
     this.chao.setCollisionByProperty({ collides: true});
     this.tijolos.setCollisionByProperty({ collides: true});
@@ -236,7 +263,12 @@ export default class principal extends Phaser.Scene {
       this.coletar_cristal,
       null,
       this
-    );
+      );
+
+    /* Efeitos Sonoros*/
+    this.metal_som = this.sound.add("metal-som");
+    this.cristal_som = this.sound.add("cristal-som");
+    
   }
 
   
@@ -247,13 +279,21 @@ export default class principal extends Phaser.Scene {
       this.cameras.main.shake(100, 0.01);
   
     /* Vibrar o celular pelos mesmos 100 ms */
-      window.navigator.vibrate([100]);
+      if (window.navigator.vibrate) {
+        window.navigator.vibrate([100]);
     }
-  
+
+    /* Tocar efeito sonoro */
+      this.metal_som.play();
+    }
+
     coletar_cristal() {
   
     /* Ocultar e remover física/colisão */
       this.cristal.disableBody(true, true);
+    
+    /* Tocar efeito sonoro*/
+      this.cristal_som.play();
 
     }
   }
