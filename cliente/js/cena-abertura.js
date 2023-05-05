@@ -5,6 +5,7 @@ export default class abertura extends Phaser.Scene {
   
     preload() {
       this.load.image("ifsc-sj-2014", "./assets/ifsc-sj-2014.png");
+      this.load.image("grade", "./assets/grade.png");
     }
   
     create() {

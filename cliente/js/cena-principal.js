@@ -68,6 +68,7 @@ export default class principal extends Phaser.Scene {
     create() {
       /* Trilha Sonora */
       this.trilha = this.sound.add("tecno-trilha");
+      this.trilha.loop = true;
       this.trilha.play();
       
       /* Tilemap */ 
@@ -78,6 +79,7 @@ export default class principal extends Phaser.Scene {
       /* Tilesets */ 
       this.tileset_mapa_teste_chao = 
         this.mapa_teste.addTilesetImage("chao", "chao");
+      
       this.tileset_mapa_teste_tijolo =
         this.mapa_teste.addTilesetImage("tijolos", "tijolos");
      
@@ -89,6 +91,19 @@ export default class principal extends Phaser.Scene {
         0
       );
       
+      if (this.game.jogadores.primeiro === this.game.socket.id) {
+        this.local = "robo-1";
+        this.jogador_1 = this.physics.add.sprite(300, 225, this.local);
+        this.remoto = "robo-2";
+        this.jogador_2 = this.add.sprite(600, 225, this.remoto);
+      } else {
+        this.remoto = "robo-1";
+        this.jogador_2 = this.add.sprite(300, 225, this.remoto);
+        this.local = "robo-2";
+        this.jogador_1 = this.physics.add.sprite(600, 225, this.local);
+      }
+  
+      
       /* Layer 1: Parede (Tijolos) */ 
       this.tijolos = this.mapa_teste.createLayer(
         "tijolos",
@@ -99,6 +114,15 @@ export default class principal extends Phaser.Scene {
       /* Personagem 1 */ 
       this.jogador_1 = this.physics.add.sprite(200, 225, "robo-1");
       
+      this.anims.create({
+        key: "jogador-parado",
+        frames: this.anims.generateFrameNumbers(this.local, {
+          start: 0,
+          end: 0,
+        }),
+        frameRate: 1,
+      });
+
       this.anims.create ({
         key: "jogador-1-cima",
         frames: this.anims.generateFrameNumbers("robo-1", {
@@ -162,13 +186,13 @@ export default class principal extends Phaser.Scene {
       .setInteractive()
       .on("pointerdown", () => {
         this.cima.setFrame(1);
-        this.jogador_1.setVelocityY(-400)
-        this.jogador_1.anims.play("jogador-1-cima")
+        this.jogador_1.setVelocityY(-200);
+        this.jogador_1.anims.play("jogador-cima");
       })
       .on("pointerup", () => {
         this.cima.setFrame(0);
         this.jogador_1.setVelocityY(0);
-    
+        this.jogador_1.anims.play("jogador-parado");
       })
       .setScrollFactor(0);
       
@@ -177,12 +201,13 @@ export default class principal extends Phaser.Scene {
       .setInteractive()
       .on("pointerdown", () => {
         this.baixo.setFrame(1);
-        this.jogador_1.setVelocityY(400)
-        this.jogador_1.anims.play("jogador-1-baixo")
+        this.jogador_1.setVelocityY(200);
+        this.jogador_1.anims.play("jogador-baixo");
       })
       .on("pointerup", () => {
         this.baixo.setFrame(0);
         this.jogador_1.setVelocityY(0);
+        this.jogador_1.anims.play("jogador-parado");
       })
       .setScrollFactor(0);
 
@@ -191,26 +216,29 @@ export default class principal extends Phaser.Scene {
       .setInteractive()
       .on("pointerdown", () => {
         this.esquerda.setFrame(1);
-        this.jogador_1.setVelocityX(-400)
-        this.jogador_1.anims.play("jogador-1-esquerda")
+        this.jogador_1.setVelocityX(-200);
+        this.jogador_1.anims.play("jogador-esquerda");
       })
       .on("pointerup", () => {
         this.esquerda.setFrame(0);
         this.jogador_1.setVelocityX(0);
+        this.jogador_1.anims.play("jogador-parado");
       })
       .setScrollFactor(0);
+
 
       this.direita = this.add
       .sprite(190, 400, "direita", 0)
       .setInteractive()
       .on("pointerdown", () => {
         this.direita.setFrame(1);
-        this.jogador_1.setVelocityX(400)
-        this.jogador_1.anims.play("jogador-1-direita")
+        this.jogador_1.setVelocityX(200);
+        this.jogador_1.anims.play("jogador-direita");
       })
       .on("pointerup", () => {
         this.direita.setFrame(0);
         this.jogador_1.setVelocityX(0);
+        this.jogador_1.anims.play("jogador-parado");
       })
       .setScrollFactor(0);
       
@@ -269,10 +297,32 @@ export default class principal extends Phaser.Scene {
     this.metal_som = this.sound.add("metal-som");
     this.cristal_som = this.sound.add("cristal-som");
     
-  }
+    this.game.socket.on("estado-notificar", ({ frame, x, y }) => {
+      this.jogador_2.setFrame(frame);
+      this.jogador_2.x = x;
+      this.jogador_2.y = y;
+    });
 
+    this.game.socket.on("arfetatos-notificar", (artefatos) => {
+      if (artefatos.cristal) {
+        this.cristal.disableBody(true, true);
+      }
+    });  
+}
   
-    update() {}
+  update() {
+    let frame;
+    try {
+      frame = this.jogador_1.anims.getFrameName();
+    } catch (e) {
+      frame = 0;
+    }
+    this.game.socket.emit("estado-publicar", this.game.sala, {
+      frame: frame,
+      x: this.jogador_1.body.x + 32,
+      y: this.jogador_1.body.y + 32,
+    });
+  }
     
     colidir_mapa() {
     /* Tremer a tela por 100 ms com baixa intensidade (0.01) */
