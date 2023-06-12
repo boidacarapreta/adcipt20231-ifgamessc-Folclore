@@ -133,7 +133,7 @@ export default class principal extends Phaser.Scene {
     }
     
     this.game.socket.on("offer", (description) => {
-      this.game.remoteConnection = new RTCPeerConnection(this.ice_servers);
+      this.game.remoteConnection = new RTCPeerConnection(this.game.ice_servers);
 
       this.game.midias
         .getTracks()
