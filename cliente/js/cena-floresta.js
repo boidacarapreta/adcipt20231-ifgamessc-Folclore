@@ -5,11 +5,11 @@ export default class principal extends Phaser.Scene {
 
   preload() {
     this.load.tilemapTiledJSON(
-      "mapa-principal-terreo",
-      "./assets/principal-terreo.json"
+      "mapa-floresta",
+      "./assets/mapa-floresta.json"
     );
 
-    this.load.image("terreno", "./assets/terreno.png");
+    this.load.image("terreno", "./assets/A2.png");
     this.load.image("ARCas", "./assets/ARCas.png");
 
     this.load.spritesheet("robo-1", "./assets/robo-1.png", {
