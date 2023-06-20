@@ -6,18 +6,18 @@ export default class principal extends Phaser.Scene {
   preload() {
     this.load.tilemapTiledJSON(
       "mapa-floresta",
-      "./assets/mapa-floresta.json"
+      "./assetsdef/mapa-floresta.json"
     );
 
-    this.load.image("terreno", "./assets/A2.png");
-    this.load.image("ARCas", "./assets/ARCas.png");
+    this.load.image("terreno", "./assetsdef/A2.png");
+    this.load.image("fundo", "./assetsdef/fundo-floresta.png");
 
-    this.load.spritesheet("robo-1", "./assets/robo-1.png", {
+    this.load.spritesheet("player1", "./assetsdef/p1teste.png", {
       frameWidth: 64,
       frameHeight: 64,
     });
 
-    this.load.spritesheet("robo-2", "./assets/robo-2.png", {
+    this.load.spritesheet("player2", "./assetsdef/p2teste.png", {
       frameWidth: 64,
       frameHeight: 64,
     });
@@ -27,50 +27,45 @@ export default class principal extends Phaser.Scene {
       frameHeight: 56,
     });
 
-    this.load.spritesheet("cima", "./assets/cima.png", {
+    this.load.spritesheet("cima", "./assetsdef/botaocima.png", {
       frameWidth: 64,
       frameHeight: 64,
     });
 
-    this.load.spritesheet("baixo", "./assets/baixo.png", {
+    this.load.spritesheet("esquerda", "./assetsdef/botaoesquerda.png", {
       frameWidth: 64,
       frameHeight: 64,
     });
 
-    this.load.spritesheet("esquerda", "./assets/esquerda.png", {
+    this.load.spritesheet("direita", "./assetsdef/botaodireita.png", {
       frameWidth: 64,
       frameHeight: 64,
     });
 
-    this.load.spritesheet("direita", "./assets/direita.png", {
+    this.load.spritesheet("tela-cheia", "./assetsdef/tela-cheia.png", {
       frameWidth: 64,
       frameHeight: 64,
     });
 
-    this.load.spritesheet("tela-cheia", "./assets/tela-cheia.png", {
-      frameWidth: 64,
-      frameHeight: 64,
-    });
-
-    this.load.audio("techno-trilha", "./assets/techno.mp3");
-    this.load.audio("metal-som", "./assets/metal.mp3");
-    this.load.audio("cristal-som", "./assets/cristal.mp3");
+    this.load.audio("musica-fundo", "./assetsdef/");
+    this.load.audio("", "./assetsdef/");
+    this.load.audio("", "./assetsdef/");
   }
 
   create() {
-    this.trilha = this.sound.add("techno-trilha");
+    this.trilha = this.sound.add("musica-fundo");
     this.trilha.loop = true;
     this.trilha.play();
 
-    this.mapa_principal_terreo = this.make.tilemap({
-      key: "mapa-principal-terreo",
+    this.mapa_floresta = this.make.tilemap({
+      key: "mapa-floresta",
     });
 
-    this.tileset_principal_terreo_terreno =
-      this.mapa_principal_terreo.addTilesetImage("terreno", "terreno");
+    this.tileset_floresta_terreno =
+      this.mapa_floresta.addTilesetImage("terreno", "terreno");
 
-    this.tileset_principal_terreo_ARCas =
-      this.mapa_principal_terreo.addTilesetImage("ARCas", "ARCas");
+    this.tileset_floresta_fundo =
+      this.mapa_floresta.addTilesetImage("fundo", "fundo");
 
     this.terreno = this.mapa_principal_terreo.createLayer(
       "terreno",
@@ -80,14 +75,14 @@ export default class principal extends Phaser.Scene {
     );
 
     if (this.game.jogadores.primeiro === this.game.socket.id) {
-      this.local = "robo-1";
+      this.local = "player1";
       this.jogador_1 = this.physics.add.sprite(300, 225, this.local);
-      this.remoto = "robo-2";
+      this.remoto = "player2";
       this.jogador_2 = this.add.sprite(600, 225, this.remoto);
     } else {
-      this.remoto = "robo-1";
+      this.remoto = "player1";
       this.jogador_2 = this.add.sprite(300, 225, this.remoto);
-      this.local = "robo-2";
+      this.local = "player2";
       this.jogador_1 = this.physics.add.sprite(600, 225, this.local);
       
       navigator.mediaDevices
